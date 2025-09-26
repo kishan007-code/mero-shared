@@ -157,7 +157,7 @@ function handleView() {
 
       <div className="identity">
   <img
-    src="public/kbergwhite2.png" 
+    src="/kbergwhite2.png" 
     alt="Kaishenberg"
     className="identity-photo"
   />
@@ -167,7 +167,7 @@ function handleView() {
       <div className="card">
         <div className="card-header">
           <div style={{ textAlign: "center", marginBottom: "20px" }}>
-  <img src="public\shared no bg 2.png" alt="MeroSHARED-prank" style={{ width: "200px", height: "auto" }} />
+  <img src="/shared no bg 2.png" alt="MeroSHARED-prank" style={{ width: "200px", height: "auto" }} />
 </div>
 <p style={{ textAlign: "center", color: "white", marginTop: "-15px", }}>
     Check Share Result
@@ -290,19 +290,19 @@ function handleView() {
       <p>Support Us:</p>
 <div className="social-links">
   <a href="https://www.facebook.com/profile.php?id=61577032744088" target="_blank" rel="noopener noreferrer">
-    <img src="public\fb.png" alt="Facebook" />
+    <img src="/fb.png" alt="Facebook" />
   </a>
   <a href="https://www.instagram.com/kai.se7en/" target="_blank" rel="noopener noreferrer">
-    <img src="public\inst.png" alt="Instagram" />
+    <img src="/inst.png" alt="Instagram" />
   </a>
   <a href="https://www.tiktok.com/@kai7berg" target="_blank" rel="noopener noreferrer">
-    <img src="public\tkt.png" alt="TikTok" />
+    <img src="/tkt.png" alt="TikTok" />
   </a>
   <a href="https://wa.me/9868713016" target="_blank" rel="noopener noreferrer">
-    <img src="public\whasap.png" alt="WhatsApp" />
+    <img src="/whasap.png" alt="WhatsApp" />
   </a>
   <a href="https://www.youtube.com/@kaishenberg" target="_blank" rel="noopener noreferrer">
-    <img src="public\ytb.png" alt="YouTube" />
+    <img src="/ytb.png" alt="YouTube" />
   </a>
  
   
