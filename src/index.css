@@ -1,0 +1,214 @@
+:root{
+  --bg1: hsla(236, 54%, 11%, 0.756);
+  --card: #0d143f;
+  --muted: #9aa4b2;
+  --accent: #2563eb;
+  --green: #16a34a;
+  --red: #bc0000;
+}
+
+*{box-sizing:border-box;}
+body, html, #root { 
+  height: 100%; 
+  margin: 0; 
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif; 
+  background: linear-gradient(180deg,var(--bg1), #001230); 
+  color: #e6eef8; 
+}
+
+.app-root { 
+  min-height: 90vh; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 24px; 
+  flex-direction: column; 
+}
+
+.card { 
+  width: 600px; 
+  max-width: 90%; /* responsive for mobile */
+  background: var(--card); 
+  padding: 20px; 
+  border-radius: 5px; 
+  box-shadow:  0 10px 30px rgba(2,6,23,0.7); 
+}
+
+.card-header h1 { margin: 0; font-size: 18px; }
+.muted { color: var(--muted); margin-top: 6px; font-size: 13px; }
+
+.form-row { 
+  margin-top: 15px; 
+  height: fit-content; 
+}
+
+.form-row label { 
+  display: block; 
+  font-size: 13px; 
+  color: var(--muted); 
+  margin-bottom: 8px; 
+}
+
+.form-row input, 
+.form-row select, 
+.form-row textarea { 
+  width: 100%; 
+  padding: 10px; 
+  border-radius: 8px; 
+  border: 1px solid rgba(255,255,255,0.06); 
+  background:#ffffff; 
+  color:black; 
+  outline: none; 
+  font-size: 14px; 
+}
+
+.small { 
+  padding: 8px 10px; 
+  background: transparent; 
+  border: 1px solid rgba(255,255,255,0.06); 
+  border-radius: 8px; 
+  color: inherit; 
+  cursor: pointer; 
+}
+
+.actions { 
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
+  margin-top: 14px; 
+  flex-wrap: wrap; /* wrap on smaller screens */
+  gap: 10px;
+}
+
+.inline-label { 
+  color: var(--muted); 
+  font-size: 13px; 
+  display:flex; 
+  gap:8px; 
+  align-items:center;   
+  cursor: pointer;
+}
+
+.primary { 
+  background:#043281ae; 
+  color: #dcdada; 
+  padding: 10px 14px; 
+  border-radius: 10px; 
+  border:solid ;border:black; 
+  font-weight: 600; 
+}
+
+.result { 
+  margin-top: 14px; 
+  padding: 12px; 
+  border-radius: 8px; 
+  text-align:center; 
+  font-weight:700; 
+}
+
+.result.green {  color: var(--green); }
+.result.red {  color: var(--red); }
+
+.disclaimer { color: var(--muted); font-size: 12px; text-align:center; }
+.footer { margin-top: 10px; color: var(--muted); font-size: 12px; text-align:center; margin-bottom: 10px; }
+
+.custom-select .options {
+  background: #ffffff;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  max-height: 260px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.custom-select .option {
+  padding: 10px;
+  cursor: pointer;
+  color: black;
+  transition: background 0.2s ease;
+}
+
+/* Hover over any option */
+.custom-select .option:hover {
+  background: #e0f0ff; /* light bluish */
+}
+
+/* Highlight the currently selected option */
+.custom-select .option.selected {
+  background: #3399ff; /* bright blue */
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-weight: bold; /* make selected text bold */
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 650px) {
+  .card {
+    padding: 15px;
+  }
+  .form-row input,
+  .form-row select,
+  .form-row textarea,
+  .primary {
+    font-size: 16px;
+    padding: 12px;
+  }
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .captcha-box {
+    flex-direction:row;
+    align-items: flex;
+    gap: 6px;
+  }
+  .custom-select .options {
+    max-height: 200px; /* smaller on mobile */
+  }
+}
+
+.identity {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+.identity-photo {
+  width: 80%;
+  max-width: 500px;   /* doesn't break on big screens */
+  height: auto;       /* keeps aspect ratio */
+  opacity: 0.75;      /* makes it subtle */
+  filter: blur(3px);  /* slight blur for blending effect */
+  object-fit: cover;
+  pointer-events: none; /* so clicks go through to card */
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 500px) {
+  .identity-photo {
+    width: 100%;       /* fills smaller screens better */
+  }
+}
+
+.social-links {
+  margin-top: 0px;
+  text-align: center;
+}
+
+.social-links a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.social-links img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+ /* makes icons white-like on dark bg */
+}
+
+.social-links img:hover {
+  transform: scale(1.4);
+  filter: brightness(1) invert(0) hue-rotate(180deg); /* hover effect */
+}
